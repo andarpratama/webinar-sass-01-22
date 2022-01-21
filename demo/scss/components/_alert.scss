@@ -1,0 +1,24 @@
+.alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: greenyellow;
+
+    & &__status {
+        font-weight: bold;
+        margin-right: 6px;
+    }
+
+    & &__close {
+        border: none;
+        background: none;
+        color: #555;
+        font-size: 20px;
+
+        &:hover {
+            cursor: pointer;
+            color: $textColor;
+        }
+    }
+}

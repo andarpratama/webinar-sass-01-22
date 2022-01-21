@@ -1,0 +1,15 @@
+.post {
+    .post-1 {
+        p {
+            @include textstyle();
+            color: $dangerColor;
+        }
+    }
+
+    .post-2 {
+        p {
+            @include textstyle();   
+            color: $primaryColor
+        }
+    }
+}

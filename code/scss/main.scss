@@ -1,0 +1,135 @@
+@import 'mixins';
+@import 'variabels';
+@import 'typography';
+
+// ==== NESTING =====
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            cursor: pointer;
+            background: red;
+            color: #fff;
+        }
+    }
+}
+
+// ==== END NESTING =====
+
+
+
+// ==== VARIABEL =====
+    // $primaryColor: lightgreen;
+    // $secondaryColor: lightblue;
+    // $textColor: red;
+
+// body {
+//     background: $primaryColor;
+// }
+
+// 
+
+// ==== END VARIABEL =====
+
+
+// ==== NESTING WITH BEM =====
+
+// .alert {
+//     padding: 10px 12px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background: $primaryColor;;
+
+//     .alert__status {
+//         font-weight: bold;
+//         margin-right: 6px;
+//     }
+
+//     .alert__close {
+//         border: none;
+//         background: none;
+//         color: #555;
+//         font-size: 20px;
+
+//         &:hover {
+//             cursor: pointer;
+//             color: #222;
+//         }
+//     }
+// }
+
+// ==== END NESTING WITH BEM =====
+
+
+// ==== MIXIN =====
+// @mixin flexbox {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-direction: row;
+// }
+
+// .alert {
+//     padding: 10px 12px;
+//     @include flexbox();
+//     background: $primaryColor;;
+
+//     .alert__status {
+//         font-weight: bold;
+//         margin-right: 6px;
+//     }
+
+//     .alert__close {
+//         border: none;
+//         background: none;
+//         color: #555;
+//         font-size: 20px;
+
+//         &:hover {
+//             cursor: pointer;
+//             color: #222;
+//         }
+//     }
+// }
+
+// ==== END MIXIN =====
+
+// ==== MIXIN WITH PARAMETER =====
+
+.alert {
+    padding: 10px 12px;
+    @include flexbox(space-between, center);
+    background: $teal;
+
+    .alert__status {
+        font-weight: bold;
+        margin-right: 6px;
+    }
+
+    .alert__close {
+        border: none;
+        background: none;
+        color: #555;
+        font-size: 20px;
+
+        &:hover {
+            cursor: pointer;
+            color: #222;
+        }
+    }
+}
